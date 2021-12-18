@@ -1,0 +1,15 @@
+We use a mouse or finger to click icons and access files, programs, and folders on our devices. But this is just one way for us to communicate with computers. The command line and the shell make
+ up a quick, powerful, text-based interface developers use to more effectively and efficiently communicate with computers to accomplish a wider set of tasks.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
+ed do eiusmodWe use a mouse or finger to click icons and access files, programs, and folders on our devices. But this is just one way for us to communicate with computers. The command line and the shell make up a quick, powerful, text-based interface developers use to more effectively and efficiently communi
+cate with computers to accomplish a wider set of tasks.
+ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ull
+amco laboris nisi ut aliquip ex ea 
+commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fug
+iat nulla pariatur. Excepteur sint occa
+ecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
+We use a mouse or finger to click icons and access files, programs, and folders on our devices. But this is just one way for us to communicate with computers. The comma
+nd line and the shell make up a quick, powerful, text-based interface developers use to more effectively and efficiently communicate with computers to accomplish a wider set of tasks.mod tempor incididunt ut 
+labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
+ip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
