@@ -48,8 +48,8 @@ while [ $opcion -ne 61 ]; do
 	echo "40) comando halt"
 	echo "41) comando shutdown -h 1"
 	echo "42) comando shutdown -c"
-	echo "43) comando shutdown -r"
-	echo "44) comando logout"
+	echo "43) comando shutdown -r now"
+	echo "44) comando locate comandos.sh"
 	echo "45) comando cd .."
 	echo "46) comando cd/user"
 	echo "47) comando cd ~"
@@ -64,8 +64,8 @@ while [ $opcion -ne 61 ]; do
 	echo "56) comando python3 -V"
 	echo "57) comando python3"
 	echo "58) comando df"
-	echo "59) comando grep ls Proyecto/comandos.sh"
-	echo "60) comando uname"
+	echo "59) comando grep ls comandos.sh"
+	echo "60) comando basename /home/damacy/Proyecto/archivo.txt"
 	echo "61) salir del programa"
 	echo -----------------seleccione una opcion--------------------
 	read opcion
@@ -300,83 +300,336 @@ y evalúa el tiempo que transcurre hasta que se registra una respuesta."
 			man man
 			clear;;
 		21)
-			;;
+			clear
+			echo este comando nos permite mandar a imprimir un texto
+			echo enter para ejecutar el comando
+			read $enter
+			echo mensaje enviado con el comando echo
+			read $enter
+			clear;;
 		22)
-			;;
+			clear
+			echo este comando nos muestra el provedor de nuestra red, si le pasamos como argumento -i nos da la direccion IP
+			echo enter para ejecutar el comando
+			read $enter
+			hostname
+			hostname -i
+			read $enter
+			clear;;
 		23)
-			;;
+			echo este comando nos limpia la pantalla de la terminal
+			echo enter para ejecutar el comando
+			read $enter
+			clear
+			echo la pantalla se limpio con exito
+			read $enter
+			clear;;
 		24)
-			;;
+			clear
+			echo este comando nos sacara de la terminal, por lo cual una vez ejecutado debera volver a iniciar el programa
+			echo enter para ejecutar el comando
+			read $enter
+			exit;;
 		25)
-			;;
+			clear
+			echo este comando nos muestra un listado de comandos que tiene el sistema, tampien se puede pasar como argumento
+			echo a un comando quedando como ls -help
+			echo enter para ejecutar el comando
+			read $enter
+			help
+			read $enter
+			clear;;
 		26)
-			;;
+			clear
+			echo este comando nos muestra los archivos y directorios de manera mas graficas, funciona como un ls
+			echo enter para ejecutar el comando
+			read $enter
+			tree
+			read $enter
+			clear;;
 		27)
-			;;
+			clear
+			echo este comando muestra información sobre los usuarios activos en ese momento en el sistema
+			echo enter para ejecutar el comando
+			read $enter
+			who
+			read $enter
+			clear;;
 		28)
-			;;
+			clear
+			echo este comando nos muestra la fecha del sistema
+			echo enter para ejecutar el comando
+			read $enter
+			date
+			read $enter
+			clear;;
 		29)
-			;;
+			clear
+			echo este comando nos da el tiempo en que se ejecuta un comando
+			echo "Real: se refiere al tiempo transcurrido entre la ejecución y la finalización del proceso.
+User: es la cantidad de tiempo de CPU gastado en código de modo usuario (fuera del núcleo) durante la ejecución del proceso.
+Sys: es la cantidad de tiempo de CPU que transcurre en el núcleo al ejecutar el proceso."
+			echo enter para ejecutar el comando
+			read $enter
+			time
+			read $enter
+			clear;;
 		30)
-			;;
+			clear
+			echo este comando muestra el tiempo de ejecucion del sistema
+			echo enter para ejecutar el comando
+			read $enter
+			uptime
+			read $enter
+			clear;;
 		31)
-			;;
+			clear
+			echo este comando nos abre el editor de texto nano, para poder salir presionar ctrl + x
+			echo enter para ejecutar el comando
+			read $enter
+			nano
+			clear;;
 		32)
-			;;
+			clear
+			echo este comando nos abre el editor de texto neovim, para salir presionar :q
+			echo enter para ejecutar el comando
+			read $enter
+			nvim
+			clear;;
 		33)
-			;;
+			clear
+			echo este comando nos abre el editor de texto gedit, el cual usa una interfaz grafica
+			echo enter para ejecutar el comando
+			read $enter
+			gedit
+			clear;;
 		34)
-			;;
+			clear
+			echo este comando nos muestra los archivos que hay en el directorio y con el argumento -l
+			echo nos muestra los permisos que contiene cada uno de los archivos
+			echo enter para ejecutar el comando
+			read $enter
+			ls -l
+			read $enter
+			clear;;
 		35)
-			;;
+			clear
+			echo este comando nos muestra los archivos que hay en el directorio y con el argumento -a
+			echo nos muestra los archivos ocultos que contiene cada uno de los archivos
+			echo enter para ejecutar el comando
+			read $enter
+			ls -a
+			read $enter
+			clear;;
 		36)
-			;;
+			clear
+			echo este comando nos muestra los procesos activos que hay en el sistema
+			echo enter para ejecutar el comando
+			read $enter
+			ps
+			read $enter
+			clear;;
 		37)
-			;;
+			clear
+			echo este comando apaga la computadora en el instante en el que se ejecuta
+			echo por lo cual si selecciona este comando, la computadora procedera a apagarse
+			echo enter para ejecutar el comando
+			read $enter
+			shutdown -h now;;
 		38)
-			;;
+			clear
+			echo este comando apaga la computadora al hacer que init pase a 0
+			echo por lo cual si selecciona este comando, la computadora procedera a apagarse
+			echo enter para ejecutar el comando
+			read $enter
+			init 0;;
 		39)
-			;;
+			clear
+			echo este comando apaga la computadora, funciona al igual que init 0
+			echo por lo cual si seleccionamos este comando, la computadora procedera a apagarse
+			echo enter para ejecutarse el comando
+			read $enter
+			telinit 0;;
 		40)
-			;;
+			clear
+			echo este comando apaga la computadora, hace que el hardware detenga todo su funcionamiento
+			echo por lo cual si seleccionamos este comando, la computadora procedera a apagarse
+			echo enter para ejecutarse el comando
+			read $enter
+			halt;;
 		41)
-			;;
+			clear
+			echo este comando apaga la computadora, pero esperara un 1min antes de apagarla
+			echo por lo cual si seleccionamos este comando, la computadora procedera a apagarse
+			echo enter para ejecutar el comando
+			read $enter
+			shutdown -h 1;;
 		42)
-			;;
+			clear
+			echo este comando nos sirve para cancelar un apagado programado, en caso de no haber un apagado programado
+			echo no mostrara nada
+			echo enter para ejecutar el comando
+			read $enter
+			shutdown -h 5
+			read $enter
+			shutdown -c
+			echo apagado cancelado con exito
+			read $enter
+			clear;;
 		43)
-			;;
+			clear
+			echo este comando reinicia la computadora
+			echo al ejecutar el comando se apagara la computadora, para proceder a encenderse en automatico
+			echo enter para ejecutar el comando
+			read $enter
+			shutdown -r now;;
 		44)
-			;;
+			clear
+			echo este comando localiza un archivo, recibe como argumento el archivo a buscar
+			echo enter para ejecutar el comando
+			read $enter
+			locate comandos.sh
+			read $enter
+			clear;;
 		45)
-			;;
+			clear
+			echo este comando nos regresa un directorio atras, del directorio en el que estamos
+			echo enter para ejecutar el comando
+			read $enter
+			echo directorio original:
+			pwd
+			echo
+			echo directorio actual:
+			cd ..
+			pwd
+			cd Proyecto/
+			read $enter
+			clear;;
+		46)
+			clear
+			echo este comando ingresa al directorio del usuario que le pasemos como argumento
+			echo enter para ejecutar el comando
+			read $enter
+			cd ..
+			cd ..
+			echo ubicacion original:
+			pwd
+			echo
+			cd damacy
+			echo ubicacion despues del comando:
+			pwd
+			read $enter
+			clear;;
 		47)
-			;;
+			clear
+			echo este comando nos regresa a la carpeta original del usuario
+			echo enter para ejecutar el comando
+			read $enter
+			echo ubicacion original:
+			pwd
+			echo
+			echo ubicacion despues del comando cd ~
+			cd ~
+			pwd
+			read $enter
+			clear;;
 		48)
-			;;
+			clear
+			echo este comando nos abre el navegador de firefox
+			echo enter para ejecutar el comando
+			read $enter
+			firefox
+			echo abriendo navegador...
+			clear;;
 		49)
-			;;
+			clear
+			echo este comando nos dice la version de git que tengamos instalada en la computadora
+			echo enter para ejecutar el comando
+			read $enter
+			git --version
+			read $enter
+			clear;;
 		50)
-			;;
+			clear
+			echo este comando nos actualiza nuestro packague control, el cual es apt, una vez ejecutado pide la contraseña de usuario
+			echo enter para ejecutar el comando
+			read $enter
+			sudo apt install
+			read $enter
+			clear;;
 		51)
-			;;
+			clear
+			echo este comando nos dice la version del editor de texto neovim
+			echo enter para ejecutar comando
+			read $enter
+			nvim -version
+			read $enter
+			clear;;
 		52)
-			;;
+			clear
+			echo este comando nos convierte en usuarios root, para salir de este modo ingresar el comando exit
+			echo enter para ejecutar el comando
+			read $enter
+			sudo su;;
 		53)
-			;;
+			clear
+			echo este comando ejecuta el comando ls en cada carpeta y subcarpeta del directorio actual, de manera recursiva
+			echo enter para ejecutar el comando
+			read $enter
+			ls -R
+			read $enter
+			clear;;
 		54)
-			;;
+			clear
+			echo este comando es similar a top, pero ofrece una interfas grafica, para salir de clic en la opcion quit o F10
+			echo enter para ejecutar el comando
+			read $enter
+			htop;;
 		55)
-			;;
+			clear
+			echo este comando nos abre el clasico juego de pacman
+			echo enter para ejecutar el comando
+			read $enter
+			pacman;;
 		56)
-			;;
+			clear
+			echo este comando nos da la version que tengamos instalada de python3
+			echo enter para ejecutar el comando
+			read $enter
+			python3 -V
+			read $enter
+			clear;;
 		57)
-			;;
+			clear
+			echo "este comando nos abre la terminal de python, desde la que podemos programar, para salir ejecute el comando exit()"
+			echo enter para ejecutar el comando
+			read $enter
+			python3;;
 		58)
-			;;
+			clear
+			echo este comando nos da un informe sobre el uso del disco en el sistema
+			echo enter para ejecutar el comando
+			read $enter
+			df
+			read $enter
+			clear;;
 		59)
-			;;
+			clear
+			echo este comando nos filtra la salida en pantalla, y nos muestra las veces que aparece la palabra ls en un archivo remarcandola en un color
+			echo enter para ejecutar el comando
+			read $enter
+			grep ls comandos.sh
+			read $enter
+			clear;;
 		60)
-			;;
+			clear
+			echo este comando nos muestra el nombre del archivo sin la ruta, recibe como parametro la ruta del archivo o solo el archivo
+			echo enter para ejecutar el comando
+			read $enter
+			echo la ruta que se ha pasado es la siguiente /home/damacy/Proyecto/archivo.txt
+			basename /home/damacy/Proyecto/archivo.txt
+			read $enter
+			clear;;
 		61)
 			clear
 			opcion=61;;
